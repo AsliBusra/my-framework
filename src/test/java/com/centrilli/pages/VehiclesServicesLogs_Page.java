@@ -175,6 +175,7 @@ public class VehiclesServicesLogs_Page {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/ul/li[4]/span[2]/select")
     public WebElement filterDropdown3;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/ul/li[4]/span[3]/input")
+    //@FindBy(xpath = "//span[@class='o_searchview_extended_prop_value']")
     public WebElement filterDropdown4;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/ul/li[5]/button[1]")
     public WebElement apply2;
@@ -239,5 +240,8 @@ public class VehiclesServicesLogs_Page {
     public WebElement filterDropdown16;
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/ul/li[17]/button[1]")
     public WebElement apply8;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[3]")
+    public WebElement newCreatedVehicle;
 }
 

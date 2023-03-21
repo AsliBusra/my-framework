@@ -275,6 +275,9 @@ public class Vehicles_Services_Logs_Definitions {
 
     @Then("user sees the {string} Services Logs value.")
     public void user_sees_the_services_logs_value(String string) {
+        vehiclesServicesLogs_page.newCreatedVehicle.isDisplayed();
+        String actual=vehiclesServicesLogs_page.newCreatedVehicle.getText();
+        Assert.assertEquals(actual,string);
 
     }
 
@@ -305,6 +308,7 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown3.sendKeys("Type");
         Thread.sleep(2000);
         vehiclesServicesLogs_page.addCustomFilter2.click();
+        vehiclesServicesLogs_page.addCustomFilter2.click();
         Thread.sleep(1000);
         vehiclesServicesLogs_page.filterDropdown4.click();
         Thread.sleep(1000);
@@ -322,9 +326,8 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown5.click();
         vehiclesServicesLogs_page.filterDropdown5.sendKeys("Total Price");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter3.click();
         Thread.sleep(1000);
-
         vehiclesServicesLogs_page.addCustomFilter3.click();
         vehiclesServicesLogs_page.filterDropdown6.click();
         vehiclesServicesLogs_page.filterDropdown6.clear();
@@ -341,7 +344,7 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown7.click();
         vehiclesServicesLogs_page.filterDropdown7.sendKeys("Date");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter4.click();
         Thread.sleep(1000);
 
         vehiclesServicesLogs_page.addCustomFilter4.click();
@@ -360,9 +363,9 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown9.click();
         vehiclesServicesLogs_page.filterDropdown9.sendKeys("Purchaser");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter5.click();
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+
         vehiclesServicesLogs_page.addCustomFilter5.click();
         vehiclesServicesLogs_page.filterDropdown10.click();
         vehiclesServicesLogs_page.filterDropdown10.clear();
@@ -377,10 +380,10 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown11.click();
         vehiclesServicesLogs_page.filterDropdown11.sendKeys("Vendor");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter6.click();
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
-        vehiclesServicesLogs_page.addCustomFilter.click();
+
+        vehiclesServicesLogs_page.addCustomFilter6.click();
         vehiclesServicesLogs_page.filterDropdown12.click();
         vehiclesServicesLogs_page.filterDropdown12.clear();
         vehiclesServicesLogs_page.filterDropdown12.sendKeys(string);
@@ -394,13 +397,13 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown13.click();
         vehiclesServicesLogs_page.filterDropdown13.sendKeys("Invoice Reference");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter7.click();
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
-        vehiclesServicesLogs_page.addCustomFilter.click();
+
+        vehiclesServicesLogs_page.addCustomFilter7.click();
         vehiclesServicesLogs_page.filterDropdown14.click();
         vehiclesServicesLogs_page.filterDropdown14.clear();
-        vehiclesServicesLogs_page.filterDropdown14.sendKeys(int1+"");
+        vehiclesServicesLogs_page.filterDropdown14.sendKeys(int1 + "");
         vehiclesServicesLogs_page.apply7.click();
     }
 
@@ -411,10 +414,10 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown15.click();
         vehiclesServicesLogs_page.filterDropdown15.sendKeys("Notes");
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
+        vehiclesServicesLogs_page.addCustomFilter8.click();
         Thread.sleep(1000);
-        vehiclesServicesLogs_page.filters.click();
-        vehiclesServicesLogs_page.addCustomFilter.click();
+
+        vehiclesServicesLogs_page.addCustomFilter8.click();
         vehiclesServicesLogs_page.filterDropdown16.click();
         vehiclesServicesLogs_page.filterDropdown16.clear();
         vehiclesServicesLogs_page.filterDropdown16.sendKeys(string);
