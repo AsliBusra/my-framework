@@ -7,7 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
     //import from io.cucumber.java not from junit
-    @Before(value = "@wip")
+    @Before
     public void setUpScenario() {
        // System.out.println("====Setting up browser using cucumber @Before");
 
@@ -23,7 +23,7 @@ public class Hooks {
 
     }
 
-    @After(value = "@wip")
+    @After
     public void tearDownScenario(Scenario scenario) {
 
         if(scenario.isFailed()){
@@ -35,15 +35,15 @@ public class Hooks {
 
 
 
-      //  Driver.closeDriver();
+        Driver.closeDriver();
 
         // System.out.println("====Closing browser using cucumber @After");
         //System.out.println("====Scenario ended/Take screenshot if failed!");
     }
 
-    @BeforeStep(value = "@wip")
+    @BeforeStep
     public void setUpStep() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //System.out.println("----->applying setup using @BeforeStep");
     }
 

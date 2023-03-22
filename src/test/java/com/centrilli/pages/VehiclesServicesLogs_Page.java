@@ -243,5 +243,15 @@ public class VehiclesServicesLogs_Page {
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/tbody/tr[1]/td[3]")
     public WebElement newCreatedVehicle;
+
+    @FindBy(xpath = "//button[@accesskey='l']")
+    public WebElement list;
+
+    @FindBy(xpath = "//button[@accesskey='k']")
+    public WebElement kanban;
+
+    @FindBy(xpath = "//button[@aria-label='graph']")
+    public WebElement graph;
+
 }
 

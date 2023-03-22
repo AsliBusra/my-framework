@@ -34,6 +34,7 @@ public class Vehicles_Services_Logs_Definitions {
 
     @And("user clicks Fleet")
     public void user_clicks_fleet() throws InterruptedException {
+        Thread.sleep(2000);
         /*Thread.sleep(3000);
         Select select=new Select(vehiclesServicesLogs_page.moreDropdown);
         List<WebElement> actualOptionsAsWebElement = select.getOptions();
@@ -125,8 +126,8 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.discardButton.click();
     }
 
-    @Then("user sees the {string}")
-    public void user_sees_the(String expected) {
+    @Then("user sees the {string} page")
+    public void user_sees_the_page(String expected) {
         String actual = vehiclesServicesLogs_page.getModuleVSLTittle.getText();
         Assert.assertEquals(expected, actual);
     }
@@ -277,7 +278,7 @@ public class Vehicles_Services_Logs_Definitions {
     public void user_sees_the_services_logs_value(String string) {
         vehiclesServicesLogs_page.newCreatedVehicle.isDisplayed();
         String actual=vehiclesServicesLogs_page.newCreatedVehicle.getText();
-        Assert.assertEquals(actual,string);
+        Assert.assertEquals(string,actual);
 
     }
 
@@ -423,6 +424,41 @@ public class Vehicles_Services_Logs_Definitions {
         vehiclesServicesLogs_page.filterDropdown16.sendKeys(string);
         vehiclesServicesLogs_page.apply8.click();
 
+    }
+
+
+    @When("users clicks List buttons")
+    public void users_clicks_list_buttons() {
+        vehiclesServicesLogs_page.list.click();
+    }
+    @Then("user sees changed Service Logs display to List")
+    public void user_sees_changed_service_logs_display_to_list() {
+        String actual=Driver.getDriver().getCurrentUrl();
+        String expected="https://qa.centrilli.com/web?#view_type=list&model=fleet.vehicle.log.services&menu_id=148&action=165";
+
+        Assert.assertEquals(expected,actual);
+    }
+    @When("users clicks Kanban buttons")
+    public void users_clicks_kanban_buttons() {
+        vehiclesServicesLogs_page.kanban.click();
+    }
+    @Then("user sees changed Service Logs display to Kanban")
+    public void user_sees_changed_service_logs_display_to_kanban() {
+        String actual=Driver.getDriver().getCurrentUrl();
+        String expected="https://qa.centrilli.com/web?#view_type=kanban&model=fleet.vehicle.log.services&menu_id=148&action=165";
+
+        Assert.assertEquals(expected,actual);
+    }
+    @When("users clicks Graph buttons")
+    public void users_clicks_graph_buttons() {
+        vehiclesServicesLogs_page.graph.click();
+    }
+    @Then("user sees changed Service Logs display to Graph")
+    public void user_sees_changed_service_logs_display_to_graph() {
+        String actual=Driver.getDriver().getCurrentUrl();
+        String expected="https://qa.centrilli.com/web?#view_type=graph&model=fleet.vehicle.log.services&menu_id=148&action=165";
+
+        Assert.assertEquals(expected,actual);
     }
 
 
